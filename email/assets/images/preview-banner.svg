@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title description">
+  <title id="title">Banner sự kiện dùng cho preview</title>
+  <desc id="description">Banner minh họa tuần lễ điện ảnh LoraFilm.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0F1016"/>
+      <stop offset="0.55" stop-color="#3B1420"/>
+      <stop offset="1" stop-color="#E50914"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" rx="28" fill="url(#bg)"/>
+  <circle cx="980" cy="120" r="210" fill="#FFD700" opacity="0.17"/>
+  <path d="M0 410 C260 310 500 500 760 370 C930 285 1080 330 1200 275 L1200 500 L0 500Z" fill="#F5A623" opacity="0.18"/>
+  <text x="70" y="170" fill="#FFD700" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="4">LORAFILM PRESENTS</text>
+  <text x="70" y="250" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="58" font-weight="900">TUẦN LỄ ĐIỆN ẢNH</text>
+  <text x="70" y="320" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="58" font-weight="900">MÙA THU 2026</text>
+  <text x="72" y="382" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="24">Ưu đãi dành riêng cho thành viên LoraFilm</text>
+</svg>
+

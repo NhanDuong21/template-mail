@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thông Báo Hủy Suất Chiếu - LoraFilm Cinema</title>
@@ -11,14 +13,73 @@
     table { border-collapse: collapse !important; }
     body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    .preheader {
+      display: none !important;
+      max-height: 0 !important;
+      max-width: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      mso-hide: all !important;
+      font-size: 1px !important;
+      line-height: 1px !important;
+      color: transparent !important;
+    }
+    .email-container, .container-table { max-width: 600px; }
+    td, p, h1, h2, h3, div, span, a { overflow-wrap: anywhere; word-break: normal; }
+    [style*="font-size: 11px"] { font-size: 12px !important; }
+    [style*="color: #6C7280"] { color: #A0A5B5 !important; }
+
+    @media (prefers-color-scheme: light) {
+      body, body > table {
+        background-color: #F3F4F6 !important;
+        color: #17191F !important;
+      }
+      .email-container, .container-table {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.10) !important;
+      }
+      [style*="background-color: #1A1C24"] { background-color: #FFFFFF !important; }
+      [style*="background-color: #14161E"],
+      [style*="background-color: #14151C"] { background-color: #F7F8FA !important; }
+      [style*="background-color: #0F1016"],
+      [style*="background-color: #12131A"] { background-color: #F1F3F6 !important; }
+      [style*="color: #F5F5F7"] { color: #17191F !important; }
+      span[style*="color: #FFFFFF"] { color: #17191F !important; }
+      [style*="color: #A0A5B5"],
+      [style*="color: #6C7280"] { color: #5B6270 !important; }
+      [style*="color: #FFD700"] { color: #8A5A00 !important; }
+      [style*="color: #F5A623"] { color: #B95F00 !important; }
+      [style*="color: #2ECC71"] { color: #157347 !important; }
+      [style*="#262936"],
+      [style*="#1E212B"] { border-color: #D9DDE5 !important; }
+      .cta-button, .pay-button, .rebook-button, .support-button {
+        color: #FFFFFF !important;
+      }
+      .cta-brand { color: #17191F !important; }
+      .cta-secondary {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        color: #17191F !important;
+      }
+      [style*="background-color: #E50914"] [style*="color: #FFD700"] {
+        color: #FFFFFF !important;
+      }
+    }
+
     @media screen and (max-width: 600px) {
       .email-container { width: 100% !important; margin: auto !important; }
       .card-padding { padding: 24px 16px !important; }
-      .support-button { display: block !important; width: 100% !important; text-align: center !important; }
+      .support-button { display: block !important; width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
     }
   </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <div class="preheader">Suất chiếu {{movie_title}} đã bị hủy. Xem chính sách hoàn tiền.</div>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
     <tr>
       <td align="center">
@@ -77,7 +138,7 @@
                   <td style="background-color: #212430; padding: 14px 20px; border-bottom: 1px dashed #262936;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px;">MÃ ĐẶT VÉ (BOOKING CODE)</td>
+                        <td style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px;">MÃ ĐẶT VÉ</td>
                         <td align="right" style="font-size: 16px; font-weight: 800; color: #FFD700; letter-spacing: 2px;">{{booking_code}}</td>
                       </tr>
                     </table>
@@ -123,7 +184,7 @@
 
               <!-- Support Button -->
               <div align="center" style="margin-bottom: 24px;">
-                <a href="{{support_link}}" class="support-button" style="display: inline-block; background-color: #E50914; color: #FFFFFF; font-size: 16px; font-weight: 700; text-decoration: none; padding: 14px 36px; border-radius: 8px; box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4);">
+                <a href="{{support_link}}" class="support-button cta-brand" style="display: inline-block; background-color: #F5A623; color: #17191F; font-size: 16px; font-weight: 700; text-decoration: none; padding: 14px 36px; border-radius: 8px; box-shadow: 0 4px 14px rgba(245, 166, 35, 0.30);">
                   📞 Liên Hệ CSKH / Hỗ Trợ
                 </a>
               </div>
@@ -141,7 +202,7 @@
           <tr>
             <td align="center" style="padding: 24px 32px 32px 32px; background-color: #14161E;">
               <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #F5F5F7;">
-                LoraFilm Cinema System
+                Hệ thống LoraFilm Cinema
               </p>
               <p style="margin: 0 0 12px 0; font-size: 12px; color: #A0A5B5; line-height: 1.5;">
                 Thành thật xin lỗi và trân trọng cảm ơn sự thông cảm từ quý khách!

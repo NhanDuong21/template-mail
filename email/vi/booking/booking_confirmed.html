@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vé Xem Phim - LoraFilm Cinema</title>
@@ -11,16 +13,91 @@
     table { border-collapse: collapse !important; }
     body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    .preheader {
+      display: none !important;
+      max-height: 0 !important;
+      max-width: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      mso-hide: all !important;
+      font-size: 1px !important;
+      line-height: 1px !important;
+      color: transparent !important;
+    }
+    .email-container, .container-table { max-width: 600px; }
+    td, p, h1, h2, h3, div, span, a { overflow-wrap: anywhere; word-break: normal; }
+    [style*="font-size: 11px"] { font-size: 12px !important; }
+    [style*="color: #6C7280"] { color: #A0A5B5 !important; }
+
+    @media (prefers-color-scheme: light) {
+      body, body > table {
+        background-color: #F3F4F6 !important;
+        color: #17191F !important;
+      }
+      .email-container, .container-table {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.10) !important;
+      }
+      [style*="background-color: #1A1C24"] { background-color: #FFFFFF !important; }
+      [style*="background-color: #14161E"],
+      [style*="background-color: #14151C"] { background-color: #F7F8FA !important; }
+      [style*="background-color: #0F1016"],
+      [style*="background-color: #12131A"] { background-color: #F1F3F6 !important; }
+      [style*="color: #F5F5F7"] { color: #17191F !important; }
+      span[style*="color: #FFFFFF"] { color: #17191F !important; }
+      [style*="color: #A0A5B5"],
+      [style*="color: #6C7280"] { color: #5B6270 !important; }
+      [style*="color: #FFD700"] { color: #8A5A00 !important; }
+      [style*="color: #F5A623"] { color: #B95F00 !important; }
+      [style*="color: #2ECC71"] { color: #157347 !important; }
+      [style*="#262936"],
+      [style*="#1E212B"] { border-color: #D9DDE5 !important; }
+      .cta-button, .pay-button, .rebook-button, .support-button {
+        color: #FFFFFF !important;
+      }
+      .cta-brand { color: #17191F !important; }
+      .cta-secondary {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        color: #17191F !important;
+      }
+      [style*="background-color: #E50914"] [style*="color: #FFD700"] {
+        color: #FFFFFF !important;
+      }
+    }
+
     @media screen and (max-width: 600px) {
-      .email-container { width: 100% !important; margin: auto !important; }
+      .email-container { width: 100% !important; max-width: 100% !important; margin: auto !important; box-sizing: border-box !important; }
       .card-padding { padding: 24px 16px !important; }
-      .ticket-stub { padding: 16px !important; }
-      .poster-col { display: block !important; width: 100% !important; margin-bottom: 16px !important; text-align: center !important; }
+      .booking-summary, .ticket-stub { width: 100% !important; max-width: 100% !important; table-layout: fixed !important; }
+      .ticket-stub { padding: 0 !important; }
+      .movie-info-table { width: 100% !important; max-width: 100% !important; table-layout: fixed !important; }
+      .poster-col { display: block !important; width: 100% !important; margin-bottom: 16px !important; padding-right: 0 !important; box-sizing: border-box !important; text-align: center !important; }
+      .poster-col img { margin: 0 auto !important; }
       .info-col { display: block !important; width: 100% !important; }
+      .booking-code-label, .booking-code-value,
+      .detail-label, .detail-value,
+      .ticket-code-label, .ticket-code-value,
+      .seat-info-col, .qr-col {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+      }
+      .booking-code-value, .ticket-code-value { padding-top: 6px !important; }
+      .detail-value { padding: 2px 0 10px 0 !important; }
+      .seat-info-col { padding-right: 0 !important; }
+      .qr-col { padding-top: 16px !important; text-align: center !important; }
     }
   </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <div class="preheader">Vé xem phim {{movie_title}} đã sẵn sàng. Mở email để xem mã QR.</div>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
     <tr>
       <td align="center">
@@ -73,14 +150,14 @@
               </p>
 
               <!-- ===== BOOKING HEADER ===== -->
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 16px 0; background-color: #0F1016; border: 2px solid #E50914; border-radius: 12px 12px 0 0; overflow: hidden;">
+              <table role="presentation" class="booking-summary" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 16px 0; background-color: #0F1016; border: 2px solid #E50914; border-radius: 12px 12px 0 0; overflow: hidden;">
                 <!-- Booking Code Banner -->
                 <tr>
                   <td style="background-color: #E50914; padding: 14px 20px;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">MÃ ĐẶT VÉ / BOOKING CODE</td>
-                        <td align="right" style="font-size: 18px; font-weight: 800; color: #FFD700; letter-spacing: 2px;">{{booking_code}}</td>
+                        <td class="booking-code-label" style="font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">MÃ ĐẶT VÉ</td>
+                        <td class="booking-code-value" align="right" style="font-size: 18px; font-weight: 800; color: #FFD700; letter-spacing: 2px;">{{booking_code}}</td>
                       </tr>
                     </table>
                   </td>
@@ -89,7 +166,7 @@
                 <!-- Poster & Movie Title Section -->
                 <tr>
                   <td style="padding: 20px;">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <table class="movie-info-table" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td width="110" valign="top" class="poster-col" style="padding-right: 16px;">
                           <img src="{{poster_url}}" alt="{{movie_title}}" width="110" style="width: 110px; max-width: 110px; border-radius: 8px; border: 1px solid #262936; display: block;" />
@@ -122,28 +199,28 @@
                   <td style="padding: 16px 20px 20px 20px;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 14px;">
                       <tr>
-                        <td width="40%" style="padding: 8px 0; color: #A0A5B5;">Phòng chiếu:</td>
-                        <td width="60%" style="padding: 8px 0; color: #F5F5F7; font-weight: 700;" align="right">{{room_name}}</td>
+                        <td class="detail-label" width="40%" style="padding: 8px 0; color: #A0A5B5;">Phòng chiếu:</td>
+                        <td class="detail-value" width="60%" style="padding: 8px 0; color: #F5F5F7; font-weight: 700;" align="right">{{room_name}}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Suất chiếu:</td>
-                        <td style="padding: 8px 0; color: #FFD700; font-weight: 700;" align="right">{{formatDateTime showtime}}</td>
+                        <td class="detail-label" style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Suất chiếu:</td>
+                        <td class="detail-value" style="padding: 8px 0; color: #FFD700; font-weight: 700;" align="right">{{formatDateTime showtime}}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Ghế đã chọn:</td>
-                        <td style="padding: 8px 0; color: #E50914; font-weight: 800;" align="right">{{seats}}</td>
+                        <td class="detail-label" style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Ghế đã chọn:</td>
+                        <td class="detail-value" style="padding: 8px 0; color: #E50914; font-weight: 800;" align="right">{{seats}}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Bắp nước &amp; Combos:</td>
-                        <td style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{combos}}</td>
+                        <td class="detail-label" style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Bắp nước &amp; combo:</td>
+                        <td class="detail-value" style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{combos}}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Hình thức thanh toán:</td>
-                        <td style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{payment_method}}</td>
+                        <td class="detail-label" style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Thanh toán:</td>
+                        <td class="detail-value" style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{payment_method}}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 12px 0 0 0; color: #A0A5B5; border-top: 2px solid #262936; font-size: 15px; font-weight: bold;">Tổng tiền đã trả:</td>
-                        <td style="padding: 12px 0 0 0; color: #FFD700; font-weight: 800; font-size: 18px; border-top: 2px solid #262936;" align="right">{{formatCurrency total_amount}}</td>
+                        <td class="detail-label" style="padding: 12px 0 0 0; color: #A0A5B5; border-top: 2px solid #262936; font-size: 15px; font-weight: bold;">Tổng tiền đã trả:</td>
+                        <td class="detail-value" style="padding: 12px 0 0 0; color: #FFD700; font-weight: 800; font-size: 18px; border-top: 2px solid #262936;" align="right">{{formatCurrency total_amount}}</td>
                       </tr>
                     </table>
                   </td>
@@ -158,8 +235,8 @@
                   <td style="background-color: #14161E; padding: 10px 20px; border-bottom: 1px dashed #FFD700;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px;">🎟️ Mã vé:</td>
-                        <td align="right" style="font-size: 13px; font-weight: 800; color: #FFD700; letter-spacing: 1px;">{{ticketCode}}</td>
+                        <td class="ticket-code-label" style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px;">🎟️ Mã vé:</td>
+                        <td class="ticket-code-value" align="right" style="font-size: 13px; font-weight: 800; color: #FFD700; letter-spacing: 1px;">{{ticketCode}}</td>
                       </tr>
                     </table>
                   </td>
@@ -171,7 +248,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <!-- Left: Seat info -->
-                        <td valign="middle" style="padding-right: 16px;">
+                        <td class="seat-info-col" valign="middle" style="padding-right: 16px;">
                           <div style="font-size: 22px; font-weight: 900; color: #E50914; margin-bottom: 6px;">Ghế {{seatLabel}}</div>
                           <div style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">{{seatType}}</div>
                           <div style="font-size: 11px; color: #6C7280; line-height: 1.5;">
@@ -179,7 +256,7 @@
                           </div>
                         </td>
                         <!-- Right: QR Code -->
-                        <td align="center" valign="middle" width="140">
+                        <td class="qr-col" align="center" valign="middle" width="140">
                           <div style="display: inline-block; background-color: #FFFFFF; padding: 10px; border-radius: 10px; border: 2px solid #FFD700;">
                             <img src="{{qr_code_url}}" alt="QR Vé {{seatLabel}}" width="120" height="120" style="width: 120px; height: 120px; display: block;" />
                           </div>
@@ -228,7 +305,7 @@
           <tr>
             <td align="center" style="padding: 24px 32px 32px 32px; background-color: #14161E;">
               <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #F5F5F7;">
-                LoraFilm Cinema System
+                Hệ thống LoraFilm Cinema
               </p>
               <p style="margin: 0 0 12px 0; font-size: 12px; color: #A0A5B5; line-height: 1.5;">
                 Cảm ơn bạn đã lựa chọn LoraFilm Cinema! Chúc bạn có những phút giây xem phim tuyệt vời.

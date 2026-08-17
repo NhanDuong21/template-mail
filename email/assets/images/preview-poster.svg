@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" role="img" aria-labelledby="title description">
+  <title id="title">Poster phim dùng cho preview</title>
+  <desc id="description">Poster minh họa với nền không gian và logo LoraFilm.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#312E81"/>
+      <stop offset="1" stop-color="#E50914"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#FFD700" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <circle cx="480" cy="180" r="230" fill="url(#glow)"/>
+  <g fill="#fff" opacity="0.8">
+    <circle cx="90" cy="140" r="3"/><circle cx="220" cy="90" r="2"/><circle cx="380" cy="270" r="3"/>
+    <circle cx="130" cy="360" r="2"/><circle cx="520" cy="440" r="2"/><circle cx="300" cy="520" r="3"/>
+  </g>
+  <text x="50%" y="665" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="44" font-weight="800" text-anchor="middle">HÀNH TRÌNH</text>
+  <text x="50%" y="720" fill="#FFD700" font-family="Arial, sans-serif" font-size="52" font-weight="900" text-anchor="middle">VÌ SAO</text>
+  <text x="50%" y="790" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" letter-spacing="5" text-anchor="middle">LORAFILM CINEMA</text>
+</svg>
+

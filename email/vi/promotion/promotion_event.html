@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{event_title}} - LoraFilm Cinema</title>
@@ -11,6 +13,64 @@
     table { border-collapse: collapse !important; }
     body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #F5F5F7; }
 
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    .preheader {
+      display: none !important;
+      max-height: 0 !important;
+      max-width: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      mso-hide: all !important;
+      font-size: 1px !important;
+      line-height: 1px !important;
+      color: transparent !important;
+    }
+    .email-container, .container-table { max-width: 600px; }
+    td, p, h1, h2, h3, div, span, a { overflow-wrap: anywhere; word-break: normal; }
+    [style*="font-size: 11px"] { font-size: 12px !important; }
+    [style*="color: #6C7280"] { color: #A0A5B5 !important; }
+
+    @media (prefers-color-scheme: light) {
+      body, body > table {
+        background-color: #F3F4F6 !important;
+        color: #17191F !important;
+      }
+      .email-container, .container-table {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.10) !important;
+      }
+      [style*="background-color: #1A1C24"] { background-color: #FFFFFF !important; }
+      [style*="background-color: #14161E"],
+      [style*="background-color: #14151C"] { background-color: #F7F8FA !important; }
+      [style*="background-color: #0F1016"],
+      [style*="background-color: #12131A"] { background-color: #F1F3F6 !important; }
+      [style*="color: #F5F5F7"] { color: #17191F !important; }
+      span[style*="color: #FFFFFF"] { color: #17191F !important; }
+      [style*="color: #A0A5B5"],
+      [style*="color: #6C7280"] { color: #5B6270 !important; }
+      [style*="color: #FFD700"] { color: #8A5A00 !important; }
+      [style*="color: #F5A623"] { color: #B95F00 !important; }
+      [style*="color: #2ECC71"] { color: #157347 !important; }
+      [style*="#262936"],
+      [style*="#1E212B"] { border-color: #D9DDE5 !important; }
+      .cta-button, .pay-button, .rebook-button, .support-button {
+        color: #FFFFFF !important;
+      }
+      .cta-brand { color: #17191F !important; }
+      .cta-secondary {
+        background-color: #FFFFFF !important;
+        border-color: #D9DDE5 !important;
+        color: #17191F !important;
+      }
+      [style*="background-color: #E50914"] [style*="color: #FFD700"] {
+        color: #FFFFFF !important;
+      }
+    }
+
     @media screen and (max-width: 600px) {
       .container-table { width: 100% !important; border-radius: 0px !important; }
       .content-padding { padding: 20px 15px !important; }
@@ -20,6 +80,7 @@
   </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <div class="preheader">{{event_title}} — khám phá ưu đãi mới từ LoraFilm Cinema.</div>
   <!-- Outer Wrapper Table -->
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
     <tr>
@@ -50,7 +111,7 @@
                 </table>
               </div>
               <br />
-              <span style="font-size: 11px; font-weight: 600; color: #A0A5B5; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; display: block;">Cinema Booking System</span>
+              <span style="font-size: 11px; font-weight: 600; color: #A0A5B5; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; display: block;">Hệ thống đặt vé LoraFilm</span>
             </td>
           </tr>
 
@@ -119,7 +180,7 @@
               <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom: 10px;">
                 <tr>
                   <td align="center">
-                    <a class="cta-button" href="{{explore_link}}" target="_blank" style="display: inline-block; background-color: #E50914; color: #FFFFFF; font-size: 15px; font-weight: bold; text-decoration: none; padding: 14px 28px; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4);">KHÁM PHÁ SỰ KIỆN & ĐẶT VÉ NGAY</a>
+                    <a class="cta-button cta-brand" href="{{explore_link}}" target="_blank" style="display: inline-block; background-color: #F5A623; color: #17191F; font-size: 15px; font-weight: bold; text-decoration: none; padding: 14px 28px; border-radius: 6px; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 14px rgba(245, 166, 35, 0.30);">KHÁM PHÁ SỰ KIỆN & ĐẶT VÉ NGAY</a>
                   </td>
                 </tr>
               </table>
@@ -130,9 +191,10 @@
           <!-- Footer Section -->
           <tr>
             <td style="background-color: #14151C; padding: 22px 30px; text-align: center; border-top: 1px solid #262936; font-size: 12px; color: #A0A5B5; line-height: 1.6;">
-              <p style="margin: 0 0 8px 0; color: #F5F5F7; font-weight: 600;">LoraFilm Cinema Booking System</p>
+              <p style="margin: 0 0 8px 0; color: #F5F5F7; font-weight: 600;">Hệ thống LoraFilm Cinema</p>
               <p style="margin: 0 0 8px 0;">Nếu bạn có bất kỳ thắc mắc nào hoặc cần hỗ trợ, vui lòng liên hệ Bộ phận hỗ trợ khách hàng LoraFilm.</p>
-              <p style="margin: 0; color: #A0A5B5; font-size: 11px;">&copy; 2026 LoraFilm Cinema. All rights reserved.</p>
+              <p style="margin: 0 0 8px 0;"><a href="{{unsubscribe_link}}" style="color: #A0A5B5; text-decoration: underline;">Ngừng nhận email quảng bá</a></p>
+              <p style="margin: 0; color: #A0A5B5; font-size: 11px;">&copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.</p>
             </td>
           </tr>
 
