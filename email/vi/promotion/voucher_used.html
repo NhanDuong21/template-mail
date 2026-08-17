@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voucher Đã Sử Dụng - LoraFilm Cinema</title>
+  <style type="text/css">
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #F5F5F7; }
+
+    @media screen and (max-width: 600px) {
+      .container-table { width: 100% !important; border-radius: 0px !important; }
+      .content-padding { padding: 20px 15px !important; }
+      .voucher-code { font-size: 20px !important; letter-spacing: 2px !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <!-- Outer Wrapper Table -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table role="presentation" class="container-table" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #1A1C24; border: 1px solid #262936; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.5);">
+          
+          <!-- Top Accent Line (Green/Gold Success Accent) -->
+          <tr>
+            <td style="height: 4px; background: linear-gradient(90deg, #E50914 0%, #FFD700 50%, #E50914 100%); line-height: 4px; font-size: 4px;">&nbsp;</td>
+          </tr>
+
+          <!-- Header Section -->
+          <tr>
+            <td align="center" style="padding: 26px 20px 20px 20px; text-align: center; border-bottom: 1px solid #262936; background-color: #14151C;">
+              <div style="margin-bottom: 10px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                <tr>
+                <td style="padding-right: 10px; vertical-align: middle;">
+                <img src="https://cdn.jsdelivr.net/gh/vinhth05/temple-mail@main/email/assets/images/logo.png" alt="LoraFilm Logo" width="50" style="display: block; height: auto; border: 0;" />
+                </td>
+                <td style="vertical-align: middle;">
+                <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.5px;">
+                <span style="color: #FFFFFF;">Lora</span><span style="color: #F5A623;">Film</span>
+                </span>
+                </td>
+                </tr>
+                </table>
+              </div>
+              <br />
+              <span style="font-size: 11px; font-weight: 600; color: #A0A5B5; letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; display: block;">Cinema Booking System</span>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td class="content-padding" style="padding: 30px;">
+              <!-- Success Badge -->
+              <div style="display: inline-block; background-color: rgba(46, 204, 113, 0.15); border: 1px solid #2ECC71; color: #2ECC71; font-size: 12px; font-weight: bold; letter-spacing: 1px; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 20px;">
+                ✅ XÁC NHẬN SỬ DỤNG VOUCHER
+              </div>
+
+              <p style="font-size: 16px; color: #F5F5F7; margin: 0 0 16px 0;">
+                Xin chào <strong style="color: #FFD700;">{{user_name}}</strong>,
+              </p>
+              
+              <h1 style="font-size: 22px; color: #F5F5F7; margin: 0 0 14px 0; font-weight: 700; line-height: 1.3;">
+                Áp Dụng Voucher Thành Công Cho Đơn Đặt Vé!
+              </h1>
+              
+              <p style="font-size: 14px; color: #A0A5B5; line-height: 1.6; margin: 0 0 24px 0;">
+                Mã giảm giá của bạn đã được áp dụng thành công cho đơn đặt vé có mã tham chiếu <strong style="color: #FFD700;">{{booking_code}}</strong>. Chi tiết sử dụng voucher được liệt kê bên dưới.
+              </p>
+
+              <!-- Coupon / Voucher Ticket Box -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #12131A; border: 1px solid #262936; border-radius: 10px; margin-bottom: 25px;">
+                <tr>
+                  <td style="padding: 20px;">
+                    
+                    <!-- Star Highlights Header -->
+                    <div style="text-align: center; margin-bottom: 12px; color: #FFD700; font-size: 16px;">
+                      &#9733; &#9733; &#9733; &nbsp; <span style="font-size: 13px; font-weight: bold; color: #F5F5F7; text-transform: uppercase; letter-spacing: 1.5px;">Biên Lai Đổi Ưu Đãi</span> &nbsp; &#9733; &#9733; &#9733;
+                    </div>
+
+                    <!-- Voucher Name Title -->
+                    <div style="text-align: center; font-size: 18px; font-weight: bold; color: #F5F5F7; margin-bottom: 16px;">
+                      {{voucher_name}}
+                    </div>
+
+                    <!-- Dashed Border Voucher Code Box -->
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; border: 2px dashed #FFD700; border-radius: 8px; margin-bottom: 18px;">
+                      <tr>
+                        <td style="padding: 16px; text-align: center;">
+                          <span style="font-size: 11px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 6px;">Mã Voucher Đã Áp Dụng</span>
+                          <span class="voucher-code" style="font-size: 24px; font-weight: bold; color: #FFD700; letter-spacing: 3px; font-family: 'Courier New', Courier, monospace;">{{voucher_code}}</span>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Details Table -->
+                    <table width="100%" cellpadding="8" cellspacing="0" border="0" style="font-size: 13px; color: #A0A5B5;">
+                      <tr style="border-bottom: 1px solid #262936;">
+                        <td style="color: #A0A5B5; width: 45%;">Đã giảm giá:</td>
+                        <td style="color: #2ECC71; font-weight: bold; text-align: right;">-{{discount_applied}}</td>
+                      </tr>
+                      <tr style="border-bottom: 1px solid #262936;">
+                        <td style="color: #A0A5B5;">Mã đơn đặt vé:</td>
+                        <td style="color: #FFD700; font-weight: bold; text-align: right;">{{booking_code}}</td>
+                      </tr>
+                      <tr>
+                        <td style="color: #A0A5B5;">Thời gian sử dụng:</td>
+                        <td style="color: #F5F5F7; font-weight: bold; text-align: right;">{{used_time}}</td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-size: 14px; color: #A0A5B5; line-height: 1.6; margin: 0;">
+                Cảm ơn bạn đã lựa chọn LoraFilm Cinema. Chúc bạn có một trải nghiệm xem phim tuyệt vời!
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer Section -->
+          <tr>
+            <td style="background-color: #14151C; padding: 22px 30px; text-align: center; border-top: 1px solid #262936; font-size: 12px; color: #A0A5B5; line-height: 1.6;">
+              <p style="margin: 0 0 8px 0; color: #F5F5F7; font-weight: 600;">LoraFilm Cinema Booking System</p>
+              <p style="margin: 0 0 8px 0;">Nếu bạn có bất kỳ thắc mắc nào hoặc cần hỗ trợ, vui lòng liên hệ Bộ phận hỗ trợ khách hàng LoraFilm.</p>
+              <p style="margin: 0; color: #A0A5B5; font-size: 11px;">&copy; 2026 LoraFilm Cinema. All rights reserved.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

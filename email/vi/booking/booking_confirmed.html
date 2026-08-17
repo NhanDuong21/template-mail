@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vé Xem Phim - LoraFilm Cinema</title>
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    
+    @media screen and (max-width: 600px) {
+      .email-container { width: 100% !important; margin: auto !important; }
+      .card-padding { padding: 24px 16px !important; }
+      .ticket-stub { padding: 16px !important; }
+      .poster-col { display: block !important; width: 100% !important; margin-bottom: 16px !important; text-align: center !important; }
+      .info-col { display: block !important; width: 100% !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #1A1C24; border: 1px solid #262936; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);">
+          
+          <!-- Top Glowing Accent Line -->
+          <tr>
+            <td style="height: 4px; background: linear-gradient(90deg, #E50914 0%, #FFD700 50%, #E50914 100%);"></td>
+          </tr>
+
+          <!-- Header Banner -->
+          <tr>
+            <td align="center" style="padding: 28px 20px 20px 20px; border-bottom: 1px solid #262936; background-color: #14161E;">
+              <div style="margin-bottom: 10px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                  <tr>
+                    <td style="padding-right: 10px; vertical-align: middle;">
+                      <img src="https://cdn.jsdelivr.net/gh/vinhth05/temple-mail@main/email/assets/images/logo.png" alt="LoraFilm Logo" width="50" style="display: block; height: auto; border: 0;" />
+                    </td>
+                    <td style="vertical-align: middle;">
+                      <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.5px;">
+                        <span style="color: #FFFFFF;">Lora</span><span style="color: #F5A623;">Film</span>
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div style="font-size: 12px; color: #A0A5B5; margin-top: 4px; letter-spacing: 1px;">
+                VÉ PHIM ĐIỆN TỬ (E-TICKET)
+              </div>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td class="card-padding" style="padding: 32px 32px 28px 32px;">
+              <!-- Status Badge -->
+              <div style="display: inline-block; background-color: rgba(46, 204, 113, 0.15); border: 1px solid #2ECC71; color: #2ECC71; font-size: 12px; font-weight: bold; letter-spacing: 1px; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 20px;">
+                ✅ ĐẶT VÉ THÀNH CÔNG
+              </div>
+
+              <!-- Title / Greeting -->
+              <h1 style="margin: 0 0 16px 0; font-size: 22px; font-weight: 700; color: #F5F5F7; line-height: 1.3;">
+                Chúc mừng {{user_name}}!
+              </h1>
+              
+              <p style="margin: 0 0 24px 0; font-size: 15px; color: #A0A5B5; line-height: 1.6;">
+                Thanh toán của bạn đã hoàn tất thành công. Dưới đây là thông tin vé xem phim điện tử và mã QR soát vé của bạn tại <strong style="color: #F5F5F7;">LoraFilm Cinema</strong>.
+              </p>
+
+              <!-- ===== BOOKING HEADER ===== -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 0 0 16px 0; background-color: #0F1016; border: 2px solid #E50914; border-radius: 12px 12px 0 0; overflow: hidden;">
+                <!-- Booking Code Banner -->
+                <tr>
+                  <td style="background-color: #E50914; padding: 14px 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="font-size: 12px; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">MÃ ĐẶT VÉ / BOOKING CODE</td>
+                        <td align="right" style="font-size: 18px; font-weight: 800; color: #FFD700; letter-spacing: 2px;">{{booking_code}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Poster & Movie Title Section -->
+                <tr>
+                  <td style="padding: 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td width="110" valign="top" class="poster-col" style="padding-right: 16px;">
+                          <img src="{{poster_url}}" alt="{{movie_title}}" width="110" style="width: 110px; max-width: 110px; border-radius: 8px; border: 1px solid #262936; display: block;" />
+                        </td>
+                        <td valign="top" class="info-col">
+                          <div style="font-size: 20px; font-weight: 800; color: #FFD700; margin-bottom: 8px; line-height: 1.3;">
+                            {{movie_title}}
+                          </div>
+                          <div style="font-size: 14px; color: #F5F5F7; font-weight: 600; margin-bottom: 4px;">
+                            🏛️ {{cinema_name}}
+                          </div>
+                          <div style="font-size: 12px; color: #A0A5B5; line-height: 1.4;">
+                            📍 {{cinema_address}}
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Divider dashed -->
+                <tr>
+                  <td style="padding: 0 20px;">
+                    <div style="border-top: 1px dashed #262936;"></div>
+                  </td>
+                </tr>
+
+                <!-- Showtime & Shared Details -->
+                <tr>
+                  <td style="padding: 16px 20px 20px 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 14px;">
+                      <tr>
+                        <td width="40%" style="padding: 8px 0; color: #A0A5B5;">Phòng chiếu:</td>
+                        <td width="60%" style="padding: 8px 0; color: #F5F5F7; font-weight: 700;" align="right">{{room_name}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Suất chiếu:</td>
+                        <td style="padding: 8px 0; color: #FFD700; font-weight: 700;" align="right">{{formatDateTime showtime}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Ghế đã chọn:</td>
+                        <td style="padding: 8px 0; color: #E50914; font-weight: 800;" align="right">{{seats}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Bắp nước &amp; Combos:</td>
+                        <td style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{combos}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Hình thức thanh toán:</td>
+                        <td style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{payment_method}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 12px 0 0 0; color: #A0A5B5; border-top: 2px solid #262936; font-size: 15px; font-weight: bold;">Tổng tiền đã trả:</td>
+                        <td style="padding: 12px 0 0 0; color: #FFD700; font-weight: 800; font-size: 18px; border-top: 2px solid #262936;" align="right">{{formatCurrency total_amount}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- ===== PER-TICKET QR BLOCKS (one per seat) ===== -->
+              {{#each tickets}}
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 12px 0; background-color: #0F1016; border: 1px solid #262936; border-radius: 12px; overflow: hidden;" class="ticket-stub">
+                <!-- Ticket Label Header -->
+                <tr>
+                  <td style="background-color: #14161E; padding: 10px 20px; border-bottom: 1px dashed #FFD700;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px;">🎟️ Mã vé:</td>
+                        <td align="right" style="font-size: 13px; font-weight: 800; color: #FFD700; letter-spacing: 1px;">{{ticketCode}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- Seat Info + QR Side by Side -->
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <!-- Left: Seat info -->
+                        <td valign="middle" style="padding-right: 16px;">
+                          <div style="font-size: 22px; font-weight: 900; color: #E50914; margin-bottom: 6px;">Ghế {{seatLabel}}</div>
+                          <div style="font-size: 12px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">{{seatType}}</div>
+                          <div style="font-size: 11px; color: #6C7280; line-height: 1.5;">
+                            Xuất trình mã QR bên phải tại lối vào phòng chiếu để được soát vé.
+                          </div>
+                        </td>
+                        <!-- Right: QR Code -->
+                        <td align="center" valign="middle" width="140">
+                          <div style="display: inline-block; background-color: #FFFFFF; padding: 10px; border-radius: 10px; border: 2px solid #FFD700;">
+                            <img src="{{qr_code_url}}" alt="QR Vé {{seatLabel}}" width="120" height="120" style="width: 120px; height: 120px; display: block;" />
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              {{else}}
+              <!-- QR Code Block Single Fallback -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 20px 0 28px 0; background-color: #0F1016; border: 2px solid #E50914; border-radius: 12px; overflow: hidden;" class="ticket-stub">
+                <tr>
+                  <td align="center" style="background-color: #14161E; padding: 24px 20px; border-top: 2px dashed #FFD700;">
+                    <div style="font-size: 13px; font-weight: 700; color: #FFD700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px;">
+                      MÃ QR SOÁT VÉ VÀO PHÒNG CHIẾU
+                    </div>
+                    <div style="display: inline-block; background-color: #FFFFFF; padding: 12px; border-radius: 12px; border: 2px solid #FFD700;">
+                      <img src="{{qr_code_url}}" alt="QR Code Check-in" width="160" height="160" style="width: 160px; height: 160px; display: block;" />
+                    </div>
+                    <div style="font-size: 12px; color: #A0A5B5; margin-top: 12px; line-height: 1.4; max-width: 380px;">
+                      Quý khách vui lòng xuất trình mã QR này tại lối vào phòng chiếu hoặc máy quét soát vé tự động tại rạp.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              {{/each}}
+
+              <!-- Notice Box -->
+              <div style="background-color: #14161E; border-left: 4px solid #E50914; padding: 14px 16px; border-radius: 0 8px 8px 0; margin-top: 20px; margin-bottom: 4px;">
+                <p style="margin: 0; font-size: 13px; color: #F5F5F7; line-height: 1.5;">
+                  💡 <strong style="color: #FFD700;">Lưu ý:</strong> Vui lòng có mặt tại rạp trước suất chiếu khoảng 15-20 phút để nhận bắp nước và chuẩn bị vào phòng chiếu đúng giờ.
+                </p>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <div style="border-top: 1px solid #262936;"></div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 32px 32px 32px; background-color: #14161E;">
+              <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #F5F5F7;">
+                LoraFilm Cinema System
+              </p>
+              <p style="margin: 0 0 12px 0; font-size: 12px; color: #A0A5B5; line-height: 1.5;">
+                Cảm ơn bạn đã lựa chọn LoraFilm Cinema! Chúc bạn có những phút giây xem phim tuyệt vời.
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #6C7280;">
+                &copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+<!-- Legacy parser variables: {{showtime}} {{total_amount}} {{qr_code_url}} {{tickets}} -->
+</body>
+</html>

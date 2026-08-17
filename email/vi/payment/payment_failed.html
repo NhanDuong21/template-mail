@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán Thất Bại - LoraFilm Cinema</title>
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    
+    @media screen and (max-width: 600px) {
+      .email-container { width: 100% !important; margin: auto !important; }
+      .card-padding { padding: 24px 16px !important; }
+      .receipt-box { padding: 16px !important; }
+      .cta-button { display: block !important; width: 100% !important; text-align: center !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #1A1C24; border: 1px solid #262936; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);">
+          
+          <!-- Top Glowing Accent Line -->
+          <tr>
+            <td style="height: 4px; background: linear-gradient(90deg, #E50914 0%, #DC3545 50%, #E50914 100%);"></td>
+          </tr>
+
+          <!-- Header Banner with Branding -->
+          <tr>
+            <td align="center" style="padding: 28px 20px 20px 20px; border-bottom: 1px solid #262936; background-color: #14161E;">
+              <div style="margin-bottom: 10px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                <tr>
+                <td style="padding-right: 10px; vertical-align: middle;">
+                <img src="https://cdn.jsdelivr.net/gh/vinhth05/temple-mail@main/email/assets/images/logo.png" alt="LoraFilm Logo" width="50" style="display: block; height: auto; border: 0;" />
+                </td>
+                <td style="vertical-align: middle;">
+                <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.5px;">
+                <span style="color: #FFFFFF;">Lora</span><span style="color: #F5A623;">Film</span>
+                </span>
+                </td>
+                </tr>
+                </table>
+              </div>
+              <div style="font-size: 12px; color: #A0A5B5; margin-top: 4px; letter-spacing: 1px;">
+                HỆ THỐNG ĐẶT VÉ PHIM TRỰC TUYẾN
+              </div>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td class="card-padding" style="padding: 32px 24px;">
+              <!-- Status Badge: Failed (#DC3545) -->
+              <div align="left" style="margin-bottom: 20px;">
+                <span style="display: inline-block; background-color: rgba(220, 53, 69, 0.15); border: 1px solid #DC3545; color: #DC3545; font-size: 12px; font-weight: 700; letter-spacing: 1px; padding: 6px 14px; border-radius: 20px; text-transform: uppercase;">
+                  ✕ THANH TOÁN THẤT BẠI
+                </span>
+              </div>
+
+              <!-- Title / Greeting -->
+              <h1 style="margin: 0 0 16px 0; font-size: 22px; font-weight: 700; color: #F5F5F7; line-height: 1.3;">
+                Xin chào {{user_name}},
+              </h1>
+              
+              <p style="margin: 0 0 20px 0; font-size: 15px; color: #A0A5B5; line-height: 1.6;">
+                Rất tiếc, giao dịch thanh toán cho đơn đặt vé của bạn tại <strong style="color: #F5F5F7;">LoraFilm Cinema</strong> không thành công.
+              </p>
+
+              <!-- Failure Reason Alert Box -->
+              <div style="background-color: #241418; border-left: 4px solid #DC3545; border-radius: 0 8px 8px 0; padding: 14px 18px; margin-bottom: 24px;">
+                <div style="font-size: 13px; font-weight: 700; color: #DC3545; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">
+                  ⚠️ Lý do thất bại
+                </div>
+                <div style="font-size: 14px; color: #F5F5F7; font-weight: 500;">
+                  {{failure_reason}}
+                </div>
+              </div>
+
+              <!-- Transaction Details Styled Box -->
+              <table role="presentation" class="receipt-box" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin: 20px 0 28px 0; background-color: #0F1016; border: 1px solid #262936; border-radius: 10px; overflow: hidden; padding: 20px;">
+                <tr>
+                  <td style="padding-bottom: 14px; border-bottom: 1px dashed #262936;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                      <tr>
+                        <td style="font-size: 13px; font-weight: 700; color: #DC3545; text-transform: uppercase; letter-spacing: 1px;">CHI TIẾT GIAO DỊCH LỖI</td>
+                        <td align="right" style="font-size: 12px; color: #A0A5B5;">LoraFilm Pay</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-top: 14px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 14px;">
+                      <tr>
+                        <td width="45%" style="padding: 8px 0; color: #A0A5B5;">Mã giao dịch:</td>
+                        <td width="55%" style="padding: 8px 0; color: #F5F5F7; font-weight: 600; font-family: monospace;" align="right">{{transaction_id}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Mã đặt vé:</td>
+                        <td style="padding: 8px 0; color: #FFD700; font-weight: 700; letter-spacing: 1px;" align="right">{{booking_code}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 0; color: #A0A5B5; border-top: 1px solid #1E212B;">Phương thức thanh toán:</td>
+                        <td style="padding: 8px 0; color: #F5F5F7; font-weight: 600;" align="right">{{payment_method}}</td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 14px 0 0 0; color: #F5F5F7; border-top: 2px solid #262936; font-size: 15px; font-weight: 700;">Số tiền chưa thanh toán:</td>
+                        <td style="padding: 14px 0 0 0; color: #FFD700; font-weight: 800; font-size: 18px; border-top: 2px solid #262936;" align="right">{{formatCurrency amount}}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Action Button -->
+              <div align="center" style="margin-bottom: 28px;">
+                <a href="{{retry_link}}" class="cta-button" style="display: inline-block; background-color: #E50914; color: #FFFFFF; font-size: 16px; font-weight: 700; text-decoration: none; padding: 14px 36px; border-radius: 8px; box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4);">
+                  🔄 Thử Thanh Toán Lại
+                </a>
+              </div>
+
+              <p style="margin: 0; font-size: 13px; color: #A0A5B5; line-height: 1.5; text-align: center;">
+                Vui lòng thử thanh toán lại hoặc chọn phương thức thanh toán khác để tránh việc giữ chỗ bị hủy.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 24px;">
+              <div style="border-top: 1px solid #262936;"></div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 24px 32px 24px; background-color: #14161E;">
+              <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #F5F5F7;">
+                LoraFilm Cinema System
+              </p>
+              <p style="margin: 0 0 12px 0; font-size: 12px; color: #A0A5B5; line-height: 1.5;">
+                Email này được gửi tự động từ hệ thống thanh toán LoraFilm Cinema.
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #6C7280;">
+                &copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+<!-- Legacy parser variables: {{amount}} -->
+</body>
+</html>

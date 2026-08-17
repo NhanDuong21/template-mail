@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác Nhận Địa Chỉ Email - LoraFilm Cinema</title>
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table { border-collapse: collapse !important; }
+    body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #0F1016; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    
+    @media screen and (max-width: 600px) {
+      .email-container { width: 100% !important; margin: auto !important; }
+      .card-padding { padding: 24px 16px !important; }
+      .cta-button { width: 100% !important; box-sizing: border-box !important; text-align: center !important; }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table role="presentation" class="email-container" width="100%" max-width="600" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #1A1C24; border: 1px solid #262936; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);">
+          
+          <!-- Top Glowing Accent Line -->
+          <tr>
+            <td style="height: 4px; background: linear-gradient(90deg, #E50914 0%, #FFD700 50%, #E50914 100%);"></td>
+          </tr>
+
+          <!-- Header -->
+          <tr>
+            <td align="center" style="padding: 28px 20px 20px 20px; border-bottom: 1px solid #262936;">
+              <div style="margin-bottom: 10px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
+                <tr>
+                <td style="padding-right: 10px; vertical-align: middle;">
+                <img src="https://cdn.jsdelivr.net/gh/vinhth05/temple-mail@main/email/assets/images/logo.png" alt="LoraFilm Logo" width="50" style="display: block; height: auto; border: 0;" />
+                </td>
+                <td style="vertical-align: middle;">
+                <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.5px;">
+                <span style="color: #FFFFFF;">Lora</span><span style="color: #F5A623;">Film</span>
+                </span>
+                </td>
+                </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td class="card-padding" style="padding: 32px 32px 28px 32px;">
+              <!-- Badge -->
+              <div style="display: inline-block; background-color: rgba(229, 9, 20, 0.15); border: 1px solid #E50914; color: #FFD700; font-size: 12px; font-weight: bold; letter-spacing: 1px; padding: 6px 14px; border-radius: 20px; text-transform: uppercase; margin-bottom: 20px;">
+                ✉️ XÁC NHẬN EMAIL
+              </div>
+
+              <!-- Title / Greeting -->
+              <h1 style="margin: 0 0 16px 0; font-size: 22px; font-weight: 700; color: #F5F5F7; line-height: 1.3;">
+                Xin chào {{user_name}}!
+              </h1>
+              
+              <p style="margin: 0 0 24px 0; font-size: 15px; color: #A0A5B5; line-height: 1.6;">
+                Cảm ơn bạn đã đồng hành cùng <strong style="color: #F5F5F7;">LoraFilm Cinema</strong>. Vui lòng bấm vào nút bên dưới để xác nhận địa chỉ email của bạn và kích hoạt đầy đủ các tính năng đặt vé xem phim trực tuyến:
+              </p>
+
+              <!-- CTA Button -->
+              <div align="center" style="margin: 32px 0;">
+                <a href="{{verification_link}}" class="cta-button" target="_blank" style="background-color: #E50914; color: #FFFFFF; font-size: 16px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 14px rgba(229, 9, 20, 0.4); text-transform: uppercase; letter-spacing: 0.5px;">
+                  XÁC NHẬN EMAIL NGAY
+                </a>
+              </div>
+
+              <!-- Expiry Alert -->
+              <div style="background-color: #14161E; border-left: 4px solid #FFD700; padding: 14px 16px; border-radius: 0 8px 8px 0; margin-bottom: 24px;">
+                <p style="margin: 0; font-size: 14px; color: #F5F5F7; line-height: 1.5;">
+                  ⏱️ Liên kết xác nhận này sẽ hết hạn sau <strong style="color: #FFD700;">{{expiry_hours}} giờ</strong>.
+                </p>
+              </div>
+
+              <!-- Fallback Link Block -->
+              <div style="background-color: #14161E; border: 1px dashed #262936; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+                <p style="margin: 0 0 8px 0; font-size: 13px; color: #A0A5B5;">
+                  Nếu nút trên không hoạt động, bạn có thể sao chép và dán liên kết sau vào trình duyệt web:
+                </p>
+                <p style="margin: 0; font-size: 13px; color: #E50914; word-break: break-all;">
+                  <a href="{{verification_link}}" style="color: #FFD700; text-decoration: underline;">{{verification_link}}</a>
+                </p>
+              </div>
+
+              <p style="margin: 0; font-size: 14px; color: #A0A5B5; line-height: 1.5;">
+                Nếu bạn không tạo tài khoản tại LoraFilm Cinema, xin vui lòng bỏ qua email này.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr>
+            <td style="padding: 0 32px;">
+              <div style="border-top: 1px solid #262936;"></div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td align="center" style="padding: 24px 32px 32px 32px; background-color: #14161E;">
+              <p style="margin: 0 0 8px 0; font-size: 13px; font-weight: 600; color: #F5F5F7;">
+                LoraFilm Cinema System
+              </p>
+              <p style="margin: 0 0 12px 0; font-size: 12px; color: #A0A5B5; line-height: 1.5;">
+                Email này được gửi tự động. Vui lòng không phản hồi trực tiếp email này.
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #6C7280;">
+                &copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
