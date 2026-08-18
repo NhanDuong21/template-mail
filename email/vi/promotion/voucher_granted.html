@@ -10,9 +10,9 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #0F1016;
+      background-color: #F3F4F6;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #F5F5F7;
+      color: #17191F;
       -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
     }
@@ -44,44 +44,40 @@
     .email-container, .container-table { max-width: 600px; }
     td, p, h1, h2, h3, div, span, a { overflow-wrap: anywhere; word-break: normal; }
     [style*="font-size: 11px"] { font-size: 12px !important; }
-    [style*="color: #6C7280"] { color: #A0A5B5 !important; }
+    [style*="color: #5B6270"] { color: #5B6270 !important; }
 
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       body, body > table {
-        background-color: #F3F4F6 !important;
-        color: #17191F !important;
+        background-color: #0F1016 !important;
+        color: #F5F5F7 !important;
       }
       .email-container, .container-table {
-        background-color: #FFFFFF !important;
-        border-color: #D9DDE5 !important;
-        box-shadow: 0 8px 24px rgba(16, 24, 40, 0.10) !important;
+        background-color: #1A1C24 !important;
+        border-color: #262936 !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.50) !important;
       }
-      [style*="background-color: #1A1C24"] { background-color: #FFFFFF !important; }
-      [style*="background-color: #14161E"],
-      [style*="background-color: #14151C"] { background-color: #F7F8FA !important; }
-      [style*="background-color: #0F1016"],
-      [style*="background-color: #12131A"] { background-color: #F1F3F6 !important; }
-      [style*="color: #F5F5F7"] { color: #17191F !important; }
-      span[style*="color: #FFFFFF"] { color: #17191F !important; }
-      [style*="color: #A0A5B5"],
-      [style*="color: #6C7280"] { color: #5B6270 !important; }
-      [style*="color: #FFD700"] { color: #8A5A00 !important; }
-      [style*="color: #F5A623"] { color: #B95F00 !important; }
-      [style*="color: #2ECC71"] { color: #157347 !important; }
-      [style*="#262936"],
-      [style*="#1E212B"] { border-color: #D9DDE5 !important; }
+      [style*="background-color: #F7F8FA"] { background-color: #14161E !important; }
+      [style*="background-color: #F1F3F6"] { background-color: #0F1016 !important; }
+      [style*="background-color: #E9ECF2"] { background-color: #212430 !important; }
+      [style*="background-color: #FFF7E6"] { background-color: #1E1711 !important; }
+      [style*="background-color: #FFF1F2"] { background-color: #241418 !important; }
+      [style*="color: #17191F"] { color: #F5F5F7 !important; }
+      [style*="color: #5B6270"] { color: #A0A5B5 !important; }
+      [style*="color: #8A5A00"] { color: #FFD700 !important; }
+      [style*="color: #B95F00"] { color: #F5A623 !important; }
+      [style*="color: #157347"] { color: #2ECC71 !important; }
+      [style*="color: #A65D00"] { color: #FF9800 !important; }
+      [style*="#D9DDE5"] { border-color: #262936 !important; }
       .cta-button, .pay-button, .rebook-button, .support-button {
         color: #FFFFFF !important;
       }
       .cta-brand { color: #17191F !important; }
       .cta-secondary {
-        background-color: #FFFFFF !important;
-        border-color: #D9DDE5 !important;
-        color: #17191F !important;
-      }
-      [style*="background-color: #E50914"] [style*="color: #FFD700"] {
+        background-color: #14161E !important;
+        border-color: #262936 !important;
         color: #FFFFFF !important;
       }
+      .booking-code-value { color: #FFD700 !important; }
     }
 
     @media screen and (max-width: 600px) {
@@ -104,14 +100,14 @@
     }
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #0F1016; color: #F5F5F7;">
+<body style="margin: 0; padding: 0; background-color: #F3F4F6; color: #17191F;">
   <div class="preheader">Bạn vừa nhận được voucher {{voucher_name}} từ LoraFilm Cinema.</div>
   <!-- Outer Wrapper Table -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; padding: 30px 10px;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#F3F4F6" style="background-color: #F3F4F6; padding: 30px 10px;">
     <tr>
       <td align="center">
         <!-- Main Card Container -->
-        <table class="container-table" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #1A1C24; border: 1px solid #262936; border-radius: 12px; overflow: hidden;">
+        <table class="container-table" bgcolor="#FFFFFF" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 0 auto; background-color: #FFFFFF; border: 1px solid #D9DDE5; border-radius: 12px; overflow: hidden;">
           
           <!-- Top Accent Line -->
           <tr>
@@ -120,7 +116,7 @@
 
           <!-- Header Section -->
           <tr>
-            <td style="padding: 25px 30px 20px 30px; text-align: center; border-bottom: 1px solid #262936;">
+            <td style="padding: 25px 30px 20px 30px; text-align: center; border-bottom: 1px solid #D9DDE5;">
               <div style="margin-bottom: 10px;">
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;">
                 <tr>
@@ -129,69 +125,69 @@
                 </td>
                 <td style="vertical-align: middle;">
                 <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.5px;">
-                <span style="color: #FFFFFF;">Lora</span><span style="color: #F5A623;">Film</span>
+                <span style="color: #17191F;">Lora</span><span style="color: #B95F00;">Film</span>
                 </span>
                 </td>
                 </tr>
                 </table>
               </div>
               <br />
-              <span style="font-size: 11px; font-weight: 600; color: #A0A5B5; letter-spacing: 2px; text-transform: uppercase;">Hệ thống đặt vé LoraFilm</span>
+              <span style="font-size: 11px; font-weight: 600; color: #5B6270; letter-spacing: 2px; text-transform: uppercase;">Hệ thống đặt vé LoraFilm</span>
             </td>
           </tr>
 
           <!-- Content Body -->
           <tr>
             <td class="content-padding" style="padding: 30px;">
-              <p style="font-size: 16px; color: #F5F5F7; margin: 0 0 16px 0;">
-                Xin chào <strong style="color: #FFD700;">{{user_name}}</strong>,
+              <p style="font-size: 16px; color: #17191F; margin: 0 0 16px 0;">
+                Xin chào <strong style="color: #8A5A00;">{{user_name}}</strong>,
               </p>
               
-              <h1 style="font-size: 22px; color: #F5F5F7; margin: 0 0 14px 0; font-weight: 700;">
-                <span style="color: #FFD700;">&#9733;</span> Món Quà Đặc Biệt Dành Cho Bạn!
+              <h1 style="font-size: 22px; color: #17191F; margin: 0 0 14px 0; font-weight: 700;">
+                <span style="color: #8A5A00;">&#9733;</span> Món Quà Đặc Biệt Dành Cho Bạn!
               </h1>
               
-              <p style="font-size: 14px; color: #A0A5B5; line-height: 1.6; margin: 0 0 24px 0;">
+              <p style="font-size: 14px; color: #5B6270; line-height: 1.6; margin: 0 0 24px 0;">
                 LoraFilm xin gửi tặng bạn một mã ưu đãi độc quyền. Hãy sẵn sàng trải nghiệm những bộ phim bom tấn đỉnh cao tại hệ thống rạp LoraFilm với mức giá vô cùng hấp dẫn.
               </p>
 
               <!-- Coupon / Voucher Ticket Box -->
-              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #14151C; border: 1px solid #262936; border-radius: 10px; margin-bottom: 25px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #F7F8FA; border: 1px solid #D9DDE5; border-radius: 10px; margin-bottom: 25px;">
                 <tr>
                   <td style="padding: 20px;">
                     
                     <!-- Star Highlights Header -->
-                    <div style="text-align: center; margin-bottom: 12px; color: #FFD700; font-size: 16px;">
-                      &#9733; &#9733; &#9733; &nbsp; <span style="font-size: 14px; font-weight: bold; color: #F5F5F7; text-transform: uppercase; letter-spacing: 1px;">Thẻ Ưu Đãi Phim</span> &nbsp; &#9733; &#9733; &#9733;
+                    <div style="text-align: center; margin-bottom: 12px; color: #8A5A00; font-size: 16px;">
+                      &#9733; &#9733; &#9733; &nbsp; <span style="font-size: 14px; font-weight: bold; color: #17191F; text-transform: uppercase; letter-spacing: 1px;">Thẻ Ưu Đãi Phim</span> &nbsp; &#9733; &#9733; &#9733;
                     </div>
 
                     <!-- Voucher Name Title -->
-                    <div style="text-align: center; font-size: 18px; font-weight: bold; color: #F5F5F7; margin-bottom: 15px;">
+                    <div style="text-align: center; font-size: 18px; font-weight: bold; color: #17191F; margin-bottom: 15px;">
                       {{voucher_name}}
                     </div>
 
                     <!-- Dashed Border Voucher Code Box -->
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #0F1016; border: 2px dashed #FFD700; border-radius: 8px; margin-bottom: 18px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #F1F3F6; border: 2px dashed #FFD700; border-radius: 8px; margin-bottom: 18px;">
                       <tr>
                         <td style="padding: 16px; text-align: center;">
-                          <span style="font-size: 11px; color: #A0A5B5; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 6px;">Mã Voucher Của Bạn</span>
-                          <span class="voucher-code" style="font-size: 24px; font-weight: bold; color: #FFD700; letter-spacing: 3px; font-family: 'Courier New', Courier, monospace;">{{voucher_code}}</span>
+                          <span style="font-size: 11px; color: #5B6270; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 6px;">Mã Voucher Của Bạn</span>
+                          <span class="voucher-code" style="font-size: 24px; font-weight: bold; color: #8A5A00; letter-spacing: 3px; font-family: 'Courier New', Courier, monospace;">{{voucher_code}}</span>
                         </td>
                       </tr>
                     </table>
 
                     <!-- Details Table -->
-                    <table width="100%" cellpadding="8" cellspacing="0" border="0" style="font-size: 13px; color: #A0A5B5;">
-                      <tr style="border-bottom: 1px solid #262936;">
-                        <td style="color: #A0A5B5; width: 45%;">Giá trị ưu đãi:</td>
-                        <td style="color: #FFD700; font-weight: bold; text-align: right;">{{discount_value}}</td>
+                    <table width="100%" cellpadding="8" cellspacing="0" border="0" style="font-size: 13px; color: #5B6270;">
+                      <tr style="border-bottom: 1px solid #D9DDE5;">
+                        <td style="color: #5B6270; width: 45%;">Giá trị ưu đãi:</td>
+                        <td style="color: #8A5A00; font-weight: bold; text-align: right;">{{discount_value}}</td>
                       </tr>
-                      <tr style="border-bottom: 1px solid #262936;">
-                        <td style="color: #A0A5B5;">Đơn hàng tối thiểu:</td>
-                        <td style="color: #F5F5F7; font-weight: bold; text-align: right;">{{min_order_amount}}</td>
+                      <tr style="border-bottom: 1px solid #D9DDE5;">
+                        <td style="color: #5B6270;">Đơn hàng tối thiểu:</td>
+                        <td style="color: #17191F; font-weight: bold; text-align: right;">{{min_order_amount}}</td>
                       </tr>
                       <tr>
-                        <td style="color: #A0A5B5;">Hạn sử dụng:</td>
+                        <td style="color: #5B6270;">Hạn sử dụng:</td>
                         <td style="color: #E50914; font-weight: bold; text-align: right;">{{expiry_date}}</td>
                       </tr>
                     </table>
@@ -200,7 +196,7 @@
                 </tr>
               </table>
 
-              <p style="font-size: 14px; color: #A0A5B5; line-height: 1.6; margin: 0 0 25px 0;">
+              <p style="font-size: 14px; color: #5B6270; line-height: 1.6; margin: 0 0 25px 0;">
                 Mã ưu đãi đã được lưu vào tài khoản của bạn. Nhấn vào nút bên dưới để chọn phim và áp dụng ngay trước khi thời hạn kết thúc.
               </p>
 
@@ -218,11 +214,11 @@
 
           <!-- Footer Section -->
           <tr>
-            <td style="background-color: #14151C; padding: 22px 30px; text-align: center; border-top: 1px solid #262936; font-size: 12px; color: #A0A5B5; line-height: 1.6;">
-              <p style="margin: 0 0 8px 0; color: #F5F5F7; font-weight: 600;">Hệ thống LoraFilm Cinema</p>
+            <td style="background-color: #F7F8FA; padding: 22px 30px; text-align: center; border-top: 1px solid #D9DDE5; font-size: 12px; color: #5B6270; line-height: 1.6;">
+              <p style="margin: 0 0 8px 0; color: #17191F; font-weight: 600;">Hệ thống LoraFilm Cinema</p>
               <p style="margin: 0 0 8px 0;">Nếu bạn có bất kỳ thắc mắc nào, vui lòng liên hệ bộ phận hỗ trợ khách hàng LoraFilm.</p>
-              <p style="margin: 0 0 8px 0;"><a href="{{unsubscribe_link}}" style="color: #A0A5B5; text-decoration: underline;">Ngừng nhận email quảng bá</a></p>
-              <p style="margin: 0; color: #A0A5B5; font-size: 11px;">&copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.</p>
+              <p style="margin: 0 0 8px 0;"><a href="{{unsubscribe_link}}" style="color: #5B6270; text-decoration: underline;">Ngừng nhận email quảng bá</a></p>
+              <p style="margin: 0; color: #5B6270; font-size: 11px;">&copy; 2026 LoraFilm Cinema. Tất cả các quyền được bảo lưu.</p>
             </td>
           </tr>
 
